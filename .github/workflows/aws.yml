@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Du kannst auch andere Branches hier angeben, je nach Bedarf
 env:
-  BUCKET_NAME: techstarter-93358
+  BUCKET_NAME: techstarter-31469
 
 jobs:
   aws-s3-ls:
@@ -23,4 +23,4 @@ jobs:
         aws-region: eu-central-1
       
     - name:
-      run: aws s3 cp s3://$BUCKET_NAME/ ./website --recursive
+      run: aws s3 cp ./website s3://$BUCKET_NAME/ --recursive
